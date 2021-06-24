@@ -1,3 +1,6 @@
+# 参考サイト
+# - [バネ・マス・ダンパ系の伝達関数・状態空間モデルとPythonによるシミュレーション](https://qiita.com/code0327/items/10fb56090a1e56046fa4)
+
 import numpy as np
 import control.matlab as ctrl
 import matplotlib.pyplot as plt
@@ -7,7 +10,8 @@ m = 1    # 質量 [kg] 非負
 c = 1    # 減衰係数 [N/m] 非負
 k = 10   # バネ係数 [Ns/m] 非負
 
-sys = ctrl.tf((1),(m,c,k)) # 伝達関数
+# 伝達関数
+sys = ctrl.tf((1),(m,c,k))
 print(sys)
 
 t_range = (0,10)
